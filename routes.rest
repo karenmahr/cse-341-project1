@@ -1,0 +1,33 @@
+GET http://localhost:3000/users
+
+###
+
+GET http://localhost:3000/users/6a4c1ee67f0be6b7821f17b9
+
+###
+
+POST http://localhost:3000/users HTTP/1.1
+content-type:application/json
+
+{
+    "email":"test5@example.com",
+    "username": "test5@test.com",
+    "name":"Hello5",
+    "ipaddress":"94.121.168.53"
+}
+
+###
+
+PUT http://localhost:3000/users HTTP/1.1
+content-type:application/json
+
+{
+    "email":"test5@example.com",
+    "username": "test5@test.com",
+    "name":"Hello5",
+    "ipaddress":"94.121.168.53"
+}
+
+###
+
+DELETE http://localhost:3000/users/6a4c1f7c7f0be6b7821f17bb
