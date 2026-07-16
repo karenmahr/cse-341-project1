@@ -10,9 +10,18 @@ const swaggerRoutes = require('./routes/swagger');
 
 const PORT = process.env.PORT || 3000;
 
+//se ejecuta el middleware
+
+//lo traduce para que tu servidor pueda entender los datos que le envían en formato JSON.
 app.use(bodyParser.json());
+
+//Cualquier petición que empiece con / (es decir, todas), pásala primero por el archivo de rutas que está en ./routes".
 app.use('/', require('./routes'));
 app.use('/', swaggerRoutes);
+
+process.on('uncaughtException', (err, origin) => {
+    console.log(process.stderr, fd, `Caught exception: ${err}\n` + `Exception origin:${origin}`);
+});
 
 mongodb.initDb((err) => {
     if (err) {

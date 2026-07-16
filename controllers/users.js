@@ -7,6 +7,11 @@ const getAll = async (req, res) => {
     result.toArray().then((users) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(users);
+    if (response.getAll > 0){
+            res.status(204).send();
+    } else {
+        res.status(500).json(response.error || 'Some error occured while geting all the contacts.');
+    }   
     })
 };
 
@@ -17,6 +22,11 @@ const getSingle = async (req, res) => {
     result.toArray().then((users) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(users[0]);
+    if (response.getSingle > 0) {
+        res.status(204).send();
+    } else {
+            res.status(500).json(response.error || 'Some error occured while geting a single contact.');
+    }       
     })
 };
 

@@ -1,10 +1,10 @@
 GET http://localhost:3000/users
 
-###
+### GET contact by ID
 
 GET http://localhost:3000/users/6a4c1ee67f0be6b7821f17b9
 
-###
+### CREATE contact
 
 POST http://localhost:3000/users HTTP/1.1
 content-type:application/json
@@ -16,7 +16,7 @@ content-type:application/json
     "ipaddress":"94.121.168.53"
 }
 
-###
+### UPDATE contact
 
 PUT http://localhost:3000/users HTTP/1.1
 content-type:application/json
@@ -28,6 +28,6 @@ content-type:application/json
     "ipaddress":"94.121.168.53"
 }
 
-###
+### DELETE contact
 
 DELETE http://localhost:3000/users/6a4c1f7c7f0be6b7821f17bb
