@@ -18,7 +18,7 @@ content-type:application/json
 
 ### UPDATE contact
 
-PUT http://localhost:3000/users HTTP/1.1
+PUT http://localhost:3000/users/6a5ed4eaa5a7543798c058c0 HTTP/1.1
 content-type:application/json
 
 {
