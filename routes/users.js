@@ -12,10 +12,10 @@ router.get('/', usersController.getAll);
 router.get('/:id', usersController.getSingle);
 
 //para crear algo
-router.post('/', usersController.createUser);
+router.post('/', validation.saveContact, usersController.createUser);
 
 //para update algo
-router.put('/:id', usersController.updateUser);
+router.put('/:id', validation.saveContact, usersController.updateUser);
 
 router.delete('/:id', usersController.deleteUser);
 
